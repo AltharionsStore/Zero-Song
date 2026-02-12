@@ -12,22 +12,18 @@
 <div class="app">
 
   <div class="player-card">
-    <h2 id="songTitle">Pilih Lagu</h2>
+    <h2 id="songTitle">The Room Is Quiet</h2>
 
     <div class="controls">
-      <button onclick="prevSong()">⏮</button>
       <button onclick="togglePlay()" id="playBtn">▶</button>
-      <button onclick="nextSong()">⏭</button>
     </div>
 
     <input type="range" id="progress" value="0">
   </div>
 
-  <div class="playlist" id="playlist"></div>
-
   <div class="lyrics-box">
     <h3>Lirik</h3>
-    <div id="lyrics">Lirik akan tampil di sini...</div>
+    <div id="lyrics"></div>
   </div>
 
 </div>
@@ -35,6 +31,13 @@
 <script src="script.js"></script>
 
 <script>
+document.addEventListener("keydown", function(e){
+  if (e.key === "F12") e.preventDefault();
+});
+</script>
+
+</body>
+</html><script>
 // Basic protection
 document.addEventListener("keydown", function(e){
   if (e.key === "F12") e.preventDefault();
