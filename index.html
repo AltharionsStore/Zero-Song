@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zero Music</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body oncontextmenu="return false;">
+
+<div class="app">
+
+  <div class="player-card">
+    <h2 id="songTitle">Pilih Lagu</h2>
+
+    <div class="controls">
+      <button onclick="prevSong()">⏮</button>
+      <button onclick="togglePlay()" id="playBtn">▶</button>
+      <button onclick="nextSong()">⏭</button>
+    </div>
+
+    <input type="range" id="progress" value="0">
+  </div>
+
+  <div class="playlist" id="playlist"></div>
+
+  <div class="lyrics-box">
+    <h3>Lirik</h3>
+    <div id="lyrics">Lirik akan tampil di sini...</div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+<script>
+// Basic protection
+document.addEventListener("keydown", function(e){
+  if (e.key === "F12") e.preventDefault();
+});
+</script>
+
+</body>
+</html>
